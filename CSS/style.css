@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed; /* Membuat navbar tetap di atas saat scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Menempatkan navbar di atas elemen lain */
+}
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Membuat logo di kiri, nav di kanan */
+  align-items: center; /* Membuat logo dan teks sejajar secara vertikal */
+  padding: 20px 5%; /* Memberi jarak atas-bawah dan kanan-kiri */
+  background-color: rgb(246, 242, 242); /* Warna latar belakang navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan tipis */
+}
+
+.logo-container img {
+  height: 80px;
+  width: 150px;
+  display: flex; /* Menampilkan logo sebagai elemen inline */
+}
+
+.header-container nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-container nav a {
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: #333333; /* Warna teks menu */
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  justify-content: center;
+  display: relative;
+  overflow: hidden; /* Menghindari overflow dari gambar */
+  width: auto;
+  height: 50%; /* Mengatur tinggi hero section agar memenuhi layar */
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  position: relative; /* Membuat gambar tetap berada di aliran teks */
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Menempatkan gambar di belakang teks */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Memberikan efek dimensi/bayangan halus */
+}
+
+.hero h1,
+.hero .search-container {
+  position: absolute; /* Membuat elemen ini mengikuti aliran z-index */
+  z-index: 2; /* Angka lebih besar dari gambar agar berada di atas */
+  color: white; /* Ubah warna teks agar kontras dengan gambar */
+  left: 50%; /* Memposisikan elemen di tengah horizontal */
+  transform: translateX(
+    -50%
+  ); /* Menggeser elemen ke kiri setengah dari lebarnya */
+  text-align: center; /* Memusatkan teks */
+  font-size: 2.5rem; /* Ukuran font yang lebih besar untuk judul */
+}
+
+.hero h1 {
+  top: 35%; /* Mengatur posisi vertikal judul */
+  margin: 0;
+  color: white;
+}
+
+.hero .search-container {
+  top: 45%; /* Mengatur posisi vertikal kotak pencarian */
+}
+
+.search-container input[type="text"] {
+  background-color: #282a2d; /* Warna gelap di dalam search bar */
+  border: 2px solid #31859c; /* Warna garis tepi cyan/biru muda */
+  border-radius: 50px; /* Membuat sudut melengkung sempurna (kapsul) */
+  color: #ffffff; /* Warna teks saat kamu mengetik */
+  padding: 12px 24px; /* Mengatur tinggi dan ruang di dalam input */
+  width: 450px; /* Menentukan lebar kolom search */
+  font-size: 16px;
+  outline: none; /* Menghilangkan garis biru bawaan browser saat diklik */
+  box-shadow: 0 4px 15px rgba(250, 249, 249, 0.3); /* Memberikan efek dimensi/bayangan halus */
+  transition: all 0.3s ease;
+}
+
+body {
+  font: 1.2em sans-serif;
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: -150px;
+  justify-content: center;
+  display: grid;
+  position: relative;
+  zindex: 10;
+  grid-template-columns: repeat(3, minmax(250px, 350px));
+  grid-gap: 20px;
+}
+
+.card {
+  border: 1px solid #999999;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: Auto;
+  display: block;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.card .content {
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.box {
+  width: 100%;
+  height: 200px;
+  background-color: #a02626;
+  margin-top: 20px;
+}
